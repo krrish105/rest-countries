@@ -90,7 +90,7 @@ function App() {
         <Header />
         <main>
           <Routes>
-            <Route exact path='/rest-countries' element={ <HomePage /> }></Route>
+            <Route exact path='/rest-countries/' element={ <HomePage /> }></Route>
             <Route exact path='/rest-countries/:countryName' element= { <Country getCountryName = {getCountryName} /> }></Route>
           </Routes>
         </main>
