@@ -25,6 +25,7 @@ export const Country = ({getCountryName}) => {
     // call the function handler once every render
     useEffect(() => {
        fetchHandler();
+        // eslint-disable-next-line
     }, []);
 
     return (

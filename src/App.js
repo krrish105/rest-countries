@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState} from 'react';
 import './App.css';
 import { Header } from './components/Header';
 import { SearchFilter } from './components/SearchFilter';
@@ -37,11 +37,13 @@ function App() {
   // call the function handler once every render
   useEffect(() => {
     fetchHandler(url);
-  }, []);
+     // eslint-disable-next-line
+  }, []); 
 
   // call the function handler when the url is changed
   useEffect(() => {
     fetchHandler(url);
+     // eslint-disable-next-line
   }, [url]);
   
   // Submit Handler
