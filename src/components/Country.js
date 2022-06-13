@@ -30,7 +30,7 @@ export const Country = ({getCountryName}) => {
 
     return (
         <div className="mt-10">
-            <Link to="/rest-countries" className="back-btn py-[.5rem] pl-3 pr-5">&#x2190; &nbsp;&nbsp; Back</Link>
+            <Link to="/" className="back-btn py-[.5rem] pl-3 pr-5">&#x2190; &nbsp;&nbsp; Back</Link>
             {
                 loading ? <div className="font-bold text-2xl">Loading...</div> : 
                  <div className="flex items-center mt-14 country-info gap-16 justify-center flex-wrap">
@@ -78,7 +78,7 @@ export const Country = ({getCountryName}) => {
                                     country.borders.map((el, i) => {
                                         let countryName = getCountryName(el);
                                         return (
-                                            <Link to={"/rest-countries/" + countryName + "/"} key={i} className="py-1 px-5 inline-block border-country border border-solid border-slate-400">
+                                            <Link to={"/" + countryName} key={i} className="py-1 px-5 inline-block border-country border border-solid border-slate-400">
                                                 <span>{countryName}</span>
                                             </Link>
                                         )
