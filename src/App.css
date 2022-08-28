@@ -1,114 +1,161 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
 
 /* Colors */
-:root{
-  --background: hsl(207, 26%, 17%);
-  --text: hsl(0, 0%, 100%);
-  --elements: hsl(209, 23%, 22%);
+:root {
+	--background: hsl(207, 26%, 17%);
+	--text: hsl(0, 0%, 100%);
+	--elements: hsl(209, 23%, 22%);
 }
-:root.light{
-  --background: hsl(0, 0%, 97%);
-  --text: hsl(200, 15%, 8%);
-  --elements: hsl(0, 0%, 100%); 
+[data-theme="light"],
+:root.light {
+	--background: hsl(0, 0%, 97%);
+	--text: hsl(200, 15%, 8%);
+	--elements: hsl(0, 0%, 100%);
 }
 
 /* Universal Selector */
-*, *::before, *::after{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Nunito Sans', sans-serif;
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Nunito Sans", sans-serif;
 }
 
 /* Body */
-body{ 
-  background-color: var(--background); 
-  min-width: 320px;
-  color: var(--text);
+body,
+.App {
+	background-color: var(--background);
+	min-width: 320px;
+	color: var(--text);
 }
 
 /* Common styles */
-h1,h2{ font-weight: 800; }
-header, main{
-  max-width: 2560px;
-  margin: 0 auto;
-  padding: 0.75rem 1rem;
+h1,
+h2 {
+	font-weight: 800;
 }
-header, .search-filter, button{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+header,
+main {
+	max-width: 2560px;
+	margin: 0 auto;
+	padding: 0.75rem 1rem;
 }
-button, a{
-  width: fit-content;
-  height: fit-content;
-  background-color: transparent;
-  border: 0;
+header,
+.search-filter,
+button {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
-header, .country-card, form, .region-selector > div, .back-btn{ background-color: var(--elements); }
-header, .country-card, form, 
-.dropdown, .legend, .back-btn{ box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.2); }
-input[type="radio"]{
-  appearance: none;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  top: 0;
-  cursor: pointer;
+header {
+	flex-wrap: wrap;
+	gap: 12px;
 }
-input[type="text"], input[type="radio"]{ background-color: transparent; }
-h3, .country-info li{
-  font-weight: 600;
-  letter-spacing: .1rem;
+button,
+a {
+	width: fit-content;
+	height: fit-content;
+	background-color: transparent;
+	border: 0;
+}
+header,
+.country-card,
+form,
+.region-selector > div,
+.back-btn {
+	background-color: var(--elements);
+}
+header,
+.country-card,
+form,
+.dropdown,
+.legend,
+.back-btn {
+	box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.2);
+}
+input[type="radio"] {
+	appearance: none;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	top: 0;
+	cursor: pointer;
+}
+input[type="text"],
+input[type="radio"] {
+	background-color: transparent;
+}
+h3,
+.country-info li {
+	font-weight: 600;
+	letter-spacing: 0.1rem;
 }
 
 /* Search Filter */
-.search-filter{ align-items: flex-start; }
-.search-filter form svg path{ fill: var(--text); }
-.region-selector div:last-of-type { border: 0; }
+.search-filter {
+	align-items: flex-start;
+}
+.search-filter form svg path {
+	fill: var(--text);
+}
+.region-selector div:last-of-type {
+	border: 0;
+}
 
 /* Dropdown */
-.dropdown{
-  top: 3rem;
-  opacity: 0;
-  transition: top .2s ease-in-out;
-  z-index: -1;
+.dropdown {
+	top: 3rem;
+	opacity: 0;
+	transition: top 0.2s ease-in-out;
+	z-index: -1;
 }
-.dropdown.active-drop{
-  top: 3.5rem;
-  opacity: 1;
-  z-index: 10;
+.dropdown.active-drop {
+	top: 3.5rem;
+	opacity: 1;
+	z-index: 10;
 }
-.dropdown > div{ 
-  position: relative; 
-  padding: 12px 20px;
-  border-bottom: 1px solid rgb(213, 213, 213);
+.dropdown > div {
+	position: relative;
+	padding: 12px 20px;
+	border-bottom: 1px solid rgb(213, 213, 213);
 }
 
 /* Countries container */
-.countries-container{ grid-template-columns: repeat(auto-fill, 300px); }
-.country-card-text div{
-  font-size: 15px;
-  margin: 5px 0;
+.countries-container {
+	grid-template-columns: repeat(auto-fill, 300px);
 }
-.country-card-text span{
-  font-size: 17px;
-  font-weight: 600;
+.country-card-text div {
+	font-size: 15px;
+	margin: 5px 0;
+}
+.country-card-text span {
+	font-size: 17px;
+	font-weight: 600;
 }
 
 /* Country Info */
-.country-info li{ margin: 15px 0; }
-.country-info li span{ 
-  font-weight: 400; 
-  max-width: 300px;
-  display: inline-flex;
+.country-info li {
+	margin: 15px 0;
+}
+.country-info li span {
+	font-weight: 400;
+	max-width: 300px;
+	display: inline-flex;
 }
 
 /* Media Query */
 @media (min-width: 700px) {
-  header, main{ padding: 0.75rem 2.5rem; }
+	header,
+	main {
+		padding: 0.75rem 2.5rem;
+	}
+	header {
+		gap: 0;
+	}
 }
