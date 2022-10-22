@@ -7,7 +7,7 @@
 		"email": "jainkarishma76@gmail.com",
 		"url": "http://Krrish105.github.io/karishmagarg/"
 	},
-	"homepage": "https://krrish105.github.io/rest-countries",
+	"homepage": "https://krrish105.github.io/rest-countries/",
 	"repository": "https://github.com/Krrish105/rest-countries",
 	"dependencies": {
 		"@testing-library/jest-dom": "^5.16.4",
