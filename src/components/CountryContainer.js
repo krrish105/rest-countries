@@ -14,6 +14,7 @@ export const CountryContainer = ({ data }) => {
 								src={el.flags.svg}
 								alt=''
 								className='w-full object-cover h-[12.3rem] border-b-2 rounded-sm'
+								loading='lazy'
 							/>
 						)}
 						<div className='country-card-text py-5 px-6'>

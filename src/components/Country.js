@@ -46,6 +46,7 @@ export const Country = ({ getCountryName }) => {
 							width='500'
 							height='500'
 							className='h-[400px] object-cover'
+							loading='lazy'
 						/>
 					</div>
 					<div>
