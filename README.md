@@ -30,7 +30,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://github.com/Krrish105/rest-countries](https://github.com/Krrish105/rest-countries)
-- Live Site URL: [https://krrish105.github.io/rest-countries/](https://krrish105.github.io/rest-countries/)
+- Live Site URL: [https://rest-countries-k.netlify.app](https://rest-countries-k.netlify.app)
 ## My process
 
 ### Built with
