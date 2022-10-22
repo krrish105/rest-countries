@@ -101,9 +101,9 @@ function App() {
 					submitHandler={submitHandler}
 				/>
 				{error ? (
-					<div className="font-bold text-2xl">{error}</div>
+					<div className='font-bold text-2xl'>{error}</div>
 				) : loading && !countriesData.error ? (
-					<div className="font-bold text-2xl">Loading...</div>
+					<div className='font-bold text-2xl'>Loading...</div>
 				) : (
 					<CountryContainer data={countriesData} />
 				)}
@@ -113,14 +113,14 @@ function App() {
 
 	return (
 		<Router>
-			<div className="App" data-theme={theme}>
+			<div className='App' data-theme={theme}>
 				<Header switchTheme={switchTheme} />
 				<main>
 					<Routes>
-						<Route exact path="/rest-countries/" element={<HomePage />}></Route>
+						<Route exact path='/' element={<HomePage />}></Route>
 						<Route
 							exact
-							path="/rest-countries/:countryName/"
+							path='/:countryName'
 							element={<Country getCountryName={getCountryName} />}
 						></Route>
 					</Routes>

@@ -17,7 +17,7 @@ export const CountryContainer = ({ data }) => {
 							/>
 						)}
 						<div className='country-card-text py-5 px-6'>
-							<Link to={"/rest-countries/" + el.name["common"] + "/"}>
+							<Link to={"/" + el.name["common"]}>
 								<h2 className='mb-5 cursor-pointer text-lg'>
 									{el.name["common"]}
 								</h2>

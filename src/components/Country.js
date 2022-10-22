@@ -31,27 +31,27 @@ export const Country = ({ getCountryName }) => {
 	}, [countryName]);
 
 	return (
-		<div className="mt-10">
-			<Link to="/rest-countries" className="back-btn py-[.5rem] pl-3 pr-5">
+		<div className='mt-10'>
+			<Link to='/' className='back-btn py-[.5rem] pl-3 pr-5'>
 				&#x2190; &nbsp;&nbsp; Back
 			</Link>
 			{loading ? (
-				<div className="font-bold text-2xl mt-16">Loading...</div>
+				<div className='font-bold text-2xl mt-16'>Loading...</div>
 			) : (
-				<div className="flex items-center mt-14 country-info gap-16 justify-center flex-wrap">
+				<div className='flex items-center mt-14 country-info gap-16 justify-center flex-wrap'>
 					<div>
 						<img
 							src={country.flags.svg}
-							alt=""
-							width="500"
-							height="500"
-							className="h-[400px] object-cover"
+							alt=''
+							width='500'
+							height='500'
+							className='h-[400px] object-cover'
 						/>
 					</div>
 					<div>
 						<div>
-							<h2 className="text-3xl mb-4">{country.name["common"]}</h2>
-							<div className="flex gap-8 flex-wrap">
+							<h2 className='text-3xl mb-4'>{country.name["common"]}</h2>
+							<div className='flex gap-8 flex-wrap'>
 								<ul>
 									{country.name.nativeName && (
 										<li>
@@ -114,16 +114,16 @@ export const Country = ({ getCountryName }) => {
 							</div>
 						</div>
 						{country.borders && (
-							<div className="flex flex-wrap">
-								<h3 className="mr-5">Border Countries: </h3>
-								<div className="flex gap-2 flex-wrap max-w-lg">
+							<div className='flex flex-wrap'>
+								<h3 className='mr-5'>Border Countries: </h3>
+								<div className='flex gap-2 flex-wrap max-w-lg'>
 									{country.borders.map((el, i) => {
 										let countryName = getCountryName(el);
 										return (
 											<Link
-												to={"/rest-countries/" + countryName + "/"}
+												to={"/" + countryName}
 												key={i}
-												className="py-1 px-5 inline-block border-country border border-solid border-slate-400"
+												className='py-1 px-5 inline-block border-country border border-solid border-slate-400'
 											>
 												<span>{countryName}</span>
 											</Link>
